@@ -2,7 +2,7 @@
 Returns all pairs of indices
 where the sum of the elements at those indices equals the target value.
 
-### /find-pairs [POST] `apllication/json`
+### /find-pairs [POST] `application/json`
 -**Endpoint** - `/find-pairs`
 -**Method** - `POST`
 -**Request Body** - `application/json`
