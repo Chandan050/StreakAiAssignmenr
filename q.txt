@@ -1,0 +1,49 @@
+Objective:
+Create an API that takes an array of integers and a target value, and returns all pairs of indices
+where the sum of the elements at those indices equals the target value.
+Requirements:
+1. Endpoint: /find-pairs
+• Method: POST
+• Request Body:
+• Accepts a JSON object with the following structure:
+
+Request
+{
+&quot;numbers&quot;: [1, 2, 3, 4, 5],
+&quot;target&quot;: 6
+}
+• numbers: An array of integers.
+• target: An integer representing the target sum.
+Response:
+Returns a JSON object with the following structure:
+{
+&quot;solutions&quot;: [
+[0, 4],
+[1, 3]
+]
+}
+Ex: numbers[0] + numbers[4] = 1 + 5 = 6. Which is matching the target
+solutions: An array of arrays, where each sub-array contains two integers representing the indices
+of the elements in the numbers array whose sum equals the target. If no such pairs exist, return an
+empty array [].
+
+• Edge Cases:
+• The array might contain duplicate numbers.
+• The array might be empty.
+• The target might not match the sum of any two elements in the array.
+• Validation:
+• The API should validate the input to ensure that the numbers array contains only
+integers and the target is an integer.
+• If the input is invalid, the API should return an appropriate error message with a 400
+status code.
+
+• Performance:
+• Optimize the API to handle large arrays efficiently.
+• It should be able to handle multiple requests parallely.
+
+Evaluation Criteria:
+• Correctness: Does the API correctly find and return all pairs of indices?
+• Code Quality: Is the code clean, well-structured, and maintainable?
+• Performance: Is the solution optimized for large inputs?
+• Testing: Are there comprehensive tests covering different scenarios?
+• Documentation: Is the code well-documented with clear instructions?
