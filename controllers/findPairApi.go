@@ -9,7 +9,15 @@ import (
 )
 
 
-
+//returns all pairs of indiceswhere the sum of the elements at those indices equals the target value in API.
+//@summary  Finds paires of indics with a sum equal to the target
+//@Description Finds pairs of indics in the array that sum up to the target value
+//@Accept json
+//@Produce json
+//@param request body RequestData true "Request Body"
+//@Success 200 {object} response Response
+//@Failure 400 string "Invalid request"
+//@Router /find-pairs [post]
 func FindPairAPi(c *gin.Context) {
 	var request models.RequestData
 	if err := c.ShouldBindJSON(&request); err != nil {

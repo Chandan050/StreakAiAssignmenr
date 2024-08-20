@@ -6,10 +6,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+//title Documentation
+//@version 1.0
+//@Description this is sample API for finding sum of indics equal the given target
+//@host localhost:8080
+//BasePath /
 func main() {
   _ = Router()
 }
 
+// contains all Router 
 func Router() *gin.Engine {
 		// Create a new instance of the logger
 		router := gin.Default()
